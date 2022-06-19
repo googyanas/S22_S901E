@@ -1,0 +1,8 @@
+/out/
+/device/qcom/gki-kernel/
+/kernel_platform/out/
+/vendor/qcom/opensource/audio-kernel/include/soc/internal.h
+/vendor/qcom/opensource/audio-kernel/soc/core.h
+/vendor/qcom/opensource/audio-kernel/soc/pinctrl-utils.h
+*.orig
+/exports.txt

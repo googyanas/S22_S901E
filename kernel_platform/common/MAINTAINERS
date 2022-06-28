@@ -4298,13 +4298,6 @@ F:	scripts/clang-tools/
 F:	scripts/lld-version.sh
 K:	\b(?i:clang|llvm)\b
 
-CLEANCACHE API
-M:	Konrad Rzeszutek Wilk <konrad.wilk@oracle.com>
-L:	linux-kernel@vger.kernel.org
-S:	Maintained
-F:	include/linux/cleancache.h
-F:	mm/cleancache.c
-
 CLK API
 M:	Russell King <linux@armlinux.org.uk>
 L:	linux-clk@vger.kernel.org

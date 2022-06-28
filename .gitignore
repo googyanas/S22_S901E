@@ -6,3 +6,4 @@
 /vendor/qcom/opensource/audio-kernel/soc/pinctrl-utils.h
 *.orig
 /exports.txt
+/kernel_platform/build.config

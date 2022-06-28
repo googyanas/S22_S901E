@@ -12,7 +12,6 @@
 #include <linux/writeback.h>
 #include <linux/pagevec.h>
 #include <linux/prefetch.h>
-#include <linux/cleancache.h>
 #include "extent_io.h"
 #include "extent-io-tree.h"
 #include "extent_map.h"
@@ -3162,14 +3161,6 @@ int btrfs_do_readpage(struct page *page, struct extent_map **em_cached,
 	struct extent_io_tree *tree = &BTRFS_I(inode)->io_tree;
 
 	set_page_extent_mapped(page);
-
-	if (!PageUptodate(page)) {
-		if (cleancache_get_page(page) == 0) {
-			BUG_ON(blocksize != PAGE_SIZE);
-			unlock_extent(tree, start, end);
-			goto out;
-		}
-	}
 
 	if (page->index == last_byte >> PAGE_SHIFT) {
 		char *userpage;

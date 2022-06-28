@@ -39,7 +39,6 @@
 #include <linux/log2.h>
 #include <linux/crc16.h>
 #include <linux/dax.h>
-#include <linux/cleancache.h>
 #include <linux/uaccess.h>
 #include <linux/iversion.h>
 #include <linux/unicode.h>
@@ -2716,7 +2715,6 @@ done:
 			EXT4_INODES_PER_GROUP(sb),
 			sbi->s_mount_opt, sbi->s_mount_opt2);
 
-	cleancache_init_fs(sb);
 	return err;
 }
 
